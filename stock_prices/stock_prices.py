@@ -2,8 +2,21 @@
 
 import argparse
 
+test_array = [1050, 270, 1540, 3800, 2]
+
 def find_max_profit(prices):
-  pass
+  if len(prices) <= 1:
+    return float("-inf")
+  
+  max_profit = find_max_profit(prices[1:])
+
+  for i in range(1, len(prices)):
+    if prices[i] - prices[0] > max_profit:
+      max_profit = prices[i] - prices[0]
+  
+  return max_profit
+
+print(find_max_profit(test_array))
 
 
 if __name__ == '__main__':
