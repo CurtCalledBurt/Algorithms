@@ -5,6 +5,8 @@ import sys
 def making_change(amount, denominations):
   pass 
 
+# Try doing the same thing as eat cookies, but keeping a sum of the change
+
 
 if __name__ == "__main__":
   # Test our your implementation from the command line
